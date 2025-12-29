@@ -1,4 +1,4 @@
-// Mock do tRPC client que usa localStorage em vez de API
+// Mock completo do tRPC client que usa localStorage
 import { useState, useCallback, useEffect } from 'react';
 
 // ==================== STORAGE ====================
@@ -6,6 +6,7 @@ const STORAGE_KEYS = {
   EVENTOS: 'calendario_eventos',
   RESPONSAVEIS: 'calendario_responsaveis',
   ANIVERSARIOS: 'calendario_aniversarios',
+  CONFIGURACOES: 'calendario_configuracoes',
 };
 
 // ==================== EVENTOS ====================
@@ -159,6 +160,22 @@ function deleteAniversario(input: { id: number }) {
   return { success: true };
 }
 
+// ==================== CONFIGURAÇÕES ====================
+function getConfiguracoes() {
+  const stored = localStorage.getItem(STORAGE_KEYS.CONFIGURACOES);
+  return stored ? JSON.parse(stored) : {
+    titulo: 'Calendário Gerencial CGTIC - 2026',
+    subtitulo: 'Controle de Eventos, Prazos e Responsáveis',
+    rodape: ''
+  };
+}
+
+function updateConfiguracoes(input: any) {
+  localStorage.setItem(STORAGE_KEYS.CONFIGURACOES, JSON.stringify(input));
+  window.dispatchEvent(new Event('storage'));
+  return input;
+}
+
 // ==================== HOOKS ====================
 function useQuery(queryFn: () => any, deps: any[] = []) {
   const [data, setData] = useState<any>(null);
@@ -267,4 +284,35 @@ export const trpc = {
         useMutation(deleteAniversario, options),
     },
   },
+  configuracoes: {
+    getAll: {
+      useQuery: () => useQuery(() => getConfiguracoes(), []),
+    },
+    update: {
+      useMutation: (options?: { onSuccess?: () => void }) =>
+        useMutation(updateConfiguracoes, options),
+    },
+  },
+  useUtils: () => ({
+    eventos: {
+      list: {
+        invalidate: () => window.dispatchEvent(new Event('storage')),
+      },
+    },
+    responsaveis: {
+      list: {
+        invalidate: () => window.dispatchEvent(new Event('storage')),
+      },
+    },
+    aniversarios: {
+      list: {
+        invalidate: () => window.dispatchEvent(new Event('storage')),
+      },
+    },
+    configuracoes: {
+      getAll: {
+        invalidate: () => window.dispatchEvent(new Event('storage')),
+      },
+    },
+  }),
 };
