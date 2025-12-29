@@ -7,6 +7,7 @@ import superjson from "superjson";
 import App from "./App";
 import { getLoginUrl } from "./const";
 import "./index.css";
+import { initializeEventos } from "./data/eventosIniciais";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,9 @@ queryClient.getMutationCache().subscribe(event => {
     console.error("[API Mutation Error]", error);
   }
 });
+
+// Inicializar eventos no localStorage
+initializeEventos();
 
 const trpcClient = trpc.createClient({
   links: [

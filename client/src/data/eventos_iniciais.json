@@ -1,0 +1,107 @@
+[
+  {
+    "titulo": "Revisão de Contratos de TI",
+    "dataInicio": "2026-01-20T14:00:00",
+    "dataFim": "2026-01-20T17:00:00",
+    "tipo": "prazo",
+    "responsavel": "Paloma"
+  },
+  {
+    "titulo": "Encontro da equipe",
+    "dataInicio": "2026-02-03T11:13:00",
+    "dataFim": "2026-02-03T12:16:00",
+    "tipo": "reuniao",
+    "responsavel": "SMIT/CGTIC/CA"
+  },
+  {
+    "titulo": "Treinamento de Segurança da Informação",
+    "dataInicio": "2026-02-10T09:00:00",
+    "dataFim": "2026-02-10T18:00:00",
+    "tipo": "prazo",
+    "responsavel": "Dennis"
+  },
+  {
+    "titulo": "Reunião Mensal",
+    "dataInicio": "2026-02-25T08:00:00",
+    "dataFim": "2026-02-25T09:00:00",
+    "tipo": "reuniao",
+    "responsavel": "Paloma"
+  },
+  {
+    "titulo": "Atualização de Infraestrutura",
+    "dataInicio": "2026-03-05T08:00:00",
+    "dataFim": "2026-03-05T18:00:00",
+    "tipo": "evento",
+    "responsavel": "André"
+  },
+  {
+    "titulo": "Workshop de Inovação",
+    "dataInicio": "2026-04-12T09:00:00",
+    "dataFim": "2026-04-12T17:00:00",
+    "tipo": "reuniao",
+    "responsavel": "Felipe Ferrari"
+  },
+  {
+    "titulo": "Auditoria de Sistemas",
+    "dataInicio": "2026-05-08T09:00:00",
+    "dataFim": "2026-05-08T18:00:00",
+    "tipo": "prazo",
+    "responsavel": "Alexander"
+  },
+  {
+    "titulo": "Reunião Semestral CGTIC",
+    "dataInicio": "2026-06-15T09:00:00",
+    "dataFim": "2026-06-15T12:00:00",
+    "tipo": "reuniao",
+    "responsavel": "Noguchi"
+  },
+  {
+    "titulo": "Implementação de Novos Sistemas",
+    "dataInicio": "2026-07-20T08:00:00",
+    "dataFim": "2026-07-20T18:00:00",
+    "tipo": "evento",
+    "responsavel": "Felipe Camodeca"
+  },
+  {
+    "titulo": "Avaliação de Performance",
+    "dataInicio": "2026-08-10T09:00:00",
+    "dataFim": "2026-08-10T17:00:00",
+    "tipo": "reuniao",
+    "responsavel": "Paloma"
+  },
+  {
+    "titulo": "Semana de Tecnologia",
+    "dataInicio": "2026-09-18T08:00:00",
+    "dataFim": "2026-09-18T14:00:00",
+    "tipo": "evento",
+    "responsavel": "Felipe Ferrari"
+  },
+  {
+    "titulo": "Backup e Recuperação - Testes",
+    "dataInicio": "2026-10-12T08:00:00",
+    "dataFim": "2026-10-12T18:00:00",
+    "tipo": "evento",
+    "responsavel": "André"
+  },
+  {
+    "titulo": "Planejamento Orçamentário 2027",
+    "dataInicio": "2026-11-20T09:00:00",
+    "dataFim": "2026-11-20T17:00:00",
+    "tipo": "reuniao",
+    "responsavel": "Paloma"
+  },
+  {
+    "titulo": "APTI DOS APDO",
+    "dataInicio": "2025-12-17T16:55:00",
+    "dataFim": "2025-12-17T17:56:00",
+    "tipo": "evento",
+    "responsavel": ""
+  },
+  {
+    "titulo": "Encerramento e Balanço Anual",
+    "dataInicio": "2026-12-15T09:00:00",
+    "dataFim": "2026-12-15T12:00:00",
+    "tipo": "reuniao",
+    "responsavel": "Noguchi"
+  }
+]
