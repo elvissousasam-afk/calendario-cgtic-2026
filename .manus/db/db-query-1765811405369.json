@@ -1,0 +1,9 @@
+{
+  "query": "\nINSERT INTO responsaveis (nome, cargo, email, ativo) VALUES\n('Noguchi', 'Coordenador', NULL, 1),\n('Paloma', 'Gestão Administrativa', NULL, 1),\n('Felipe Ferrari', 'Projetos e Inovação', NULL, 1),\n('Felipe Camodeca', 'Desenvolvimento', NULL, 1),\n('Dennis', 'Segurança da Informação', NULL, 1),\n('André', 'Infraestrutura', NULL, 1),\n('Alexander', 'Suporte e Serviços', NULL, 1);\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3oW1rS6vkd5EaNi.0b8dc7261d35 --database EDPCUWEZ2y86jqvD3bvzyA --execute \nINSERT INTO responsaveis (nome, cargo, email, ativo) VALUES\n('Noguchi', 'Coordenador', NULL, 1),\n('Paloma', 'Gestão Administrativa', NULL, 1),\n('Felipe Ferrari', 'Projetos e Inovação', NULL, 1),\n('Felipe Camodeca', 'Desenvolvimento', NULL, 1),\n('Dennis', 'Segurança da Informação', NULL, 1),\n('André', 'Infraestrutura', NULL, 1),\n('Alexander', 'Suporte e Serviços', NULL, 1);\n",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 102
+}

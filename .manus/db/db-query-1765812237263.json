@@ -1,0 +1,9 @@
+{
+  "query": "\nINSERT INTO responsaveis (nome, cargo, email, ativo) VALUES\n('SMIT/CGTIC/CA', 'Setor', NULL, 1),\n('SMIT/CGTIC/DDP', 'Setor', NULL, 1),\n('SMIT/CGTIC/DGGOV', 'Setor', NULL, 1),\n('SMIT/CGTIC/EF', 'Setor', NULL, 1),\n('SMIT/CGTIC/NUCLEO APDO-TI', 'Setor', NULL, 1),\n('SMIT/CGTIC/SSO', 'Setor', NULL, 1),\n('SMIT/CGTIC/WIFI-LIVRE', 'Setor', NULL, 1);\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3oW1rS6vkd5EaNi.0b8dc7261d35 --database EDPCUWEZ2y86jqvD3bvzyA --execute \nINSERT INTO responsaveis (nome, cargo, email, ativo) VALUES\n('SMIT/CGTIC/CA', 'Setor', NULL, 1),\n('SMIT/CGTIC/DDP', 'Setor', NULL, 1),\n('SMIT/CGTIC/DGGOV', 'Setor', NULL, 1),\n('SMIT/CGTIC/EF', 'Setor', NULL, 1),\n('SMIT/CGTIC/NUCLEO APDO-TI', 'Setor', NULL, 1),\n('SMIT/CGTIC/SSO', 'Setor', NULL, 1),\n('SMIT/CGTIC/WIFI-LIVRE', 'Setor', NULL, 1);\n",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 62
+}

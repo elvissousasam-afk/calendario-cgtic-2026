@@ -1,0 +1,38 @@
+{
+  "query": "SELECT id, nome FROM responsaveis;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3oW1rS6vkd5EaNi.0b8dc7261d35 --database EDPCUWEZ2y86jqvD3bvzyA --execute SELECT id, nome FROM responsaveis;",
+  "rows": [
+    {
+      "id": "1",
+      "nome": "Noguchi"
+    },
+    {
+      "id": "2",
+      "nome": "Paloma"
+    },
+    {
+      "id": "3",
+      "nome": "Felipe Ferrari"
+    },
+    {
+      "id": "4",
+      "nome": "Felipe Camodeca"
+    },
+    {
+      "id": "5",
+      "nome": "Dennis"
+    },
+    {
+      "id": "6",
+      "nome": "André"
+    },
+    {
+      "id": "7",
+      "nome": "Alexander"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tnome\n1\tNoguchi\n2\tPaloma\n3\tFelipe Ferrari\n4\tFelipe Camodeca\n5\tDennis\n6\tAndré\n7\tAlexander\n",
+  "stderr": "",
+  "execution_time_ms": 116
+}
