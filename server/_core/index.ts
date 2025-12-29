@@ -31,8 +31,10 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 // Exportar io para uso em outros módulos
 export let io: SocketIOServer;
 
+// Declare app outside function for export
+const app = express();
+
 async function startServer() {
-  const app = express();
   const server = createServer(app);
 
   // Configurar Socket.IO para sincronização em tempo real
@@ -111,4 +113,10 @@ async function startServer() {
   });
 }
 
-startServer().catch(console.error);
+// Export app for Vercel
+export { app };
+
+// Only start server if not in Vercel environment
+if (process.env.VERCEL !== '1') {
+  startServer().catch(console.error);
+}
