@@ -13,16 +13,31 @@ function getEventos(ano?: number, mes?: number) {
   const stored = localStorage.getItem(STORAGE_KEYS.EVENTOS);
   let eventos = stored ? JSON.parse(stored) : [];
   
+  // Normalizar estrutura: converter dataInicio para dataEvento se necessário
+  eventos = eventos.map((e: any) => {
+    if (e.dataInicio && !e.dataEvento) {
+      return {
+        ...e,
+        dataEvento: e.dataInicio,
+        horaInicio: e.dataInicio ? new Date(e.dataInicio).toTimeString().slice(0, 5) : null,
+        horaFim: e.dataFim ? new Date(e.dataFim).toTimeString().slice(0, 5) : null,
+        tipoEvento: e.tipo || e.tipoEvento,
+        responsavelNome: e.responsavel || e.responsavelNome,
+      };
+    }
+    return e;
+  });
+  
   if (ano) {
     eventos = eventos.filter((e: any) => {
-      const data = new Date(e.dataEvento);
+      const data = new Date(e.dataEvento || e.dataInicio);
       return data.getFullYear() === ano;
     });
   }
   
   if (mes) {
     eventos = eventos.filter((e: any) => {
-      const data = new Date(e.dataEvento);
+      const data = new Date(e.dataEvento || e.dataInicio);
       return data.getMonth() + 1 === mes;
     });
   }
